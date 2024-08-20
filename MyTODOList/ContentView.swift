@@ -21,10 +21,8 @@ struct ContentView: View {
                 TextField("할 일을 입력해 주세요", text: $textInput)
                     .padding()
                 Button("저장") {
-                    print(textInput)
                     if textInput.count != 0 {
                         todoStorage.insert(textInput)
-                        print(todoStorage.todoList)
                         textInput = ""
                     }
                 }
@@ -39,11 +37,16 @@ struct ContentView: View {
             ForEach(todoStorage.todoList, id: \.self) { todo in
                 HStack {
                     Text(todo.content)
-                    Button("미완료") {
+                    Spacer()
+                    Button(todo.done ? "미완료" : "완료") {
                         todo.done.toggle()
                         todoStorage.updateDoneField(id: todo.id, done: todo.done)
                     }
+                    Button("삭제") {
+                        todoStorage.delete(id: todo.id)
+                    }
                 }
+                .padding()
             }
             
             
@@ -52,12 +55,15 @@ struct ContentView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
                 
-//                ForEach(todoList, id: \.self) { todo in
-//                    if todo.isCompleted == true {
-//                        Text(todo.content)
-//                            .padding()
-//                    }
-//                }
+            ForEach(todoStorage.todoList, id: \.self) { todo in
+                if todo.done {
+                    HStack {
+                        Text(todo.content)
+                            .padding()
+                        Spacer()
+                    }
+                }
+            }
             Spacer()
         }
     }

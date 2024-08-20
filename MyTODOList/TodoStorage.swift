@@ -13,7 +13,8 @@ class TodoStorage {
     var doneCol: Expression<Bool>
     
     init() {
-        self.db = try? Connection("todoList.sqlite3")
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+                self.db = try? Connection(path + "/todoList.sqlite3")
         self.table = Table("todo list")
         self.idCol = Expression<Int64>("id")
         self.startDateCol = Expression<Date>("start date")

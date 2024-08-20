@@ -10,6 +10,10 @@
 		403CA2082C62555900E7DD2E /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 403CA2072C62555900E7DD2E /* SQLite */; };
 		403CA20A2C64F70900E7DD2E /* Todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403CA2092C64F70900E7DD2E /* Todo.swift */; };
 		403CA20C2C64F84B00E7DD2E /* TodoStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 403CA20B2C64F84B00E7DD2E /* TodoStorage.swift */; };
+		4068737A2C74C564009C9459 /* AccountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 406873792C74C564009C9459 /* AccountManager.swift */; };
+		4068737C2C74C57D009C9459 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4068737B2C74C57D009C9459 /* User.swift */; };
+		4068737E2C74CAA8009C9459 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4068737D2C74CAA8009C9459 /* LoginView.swift */; };
+		406873802C74CEE6009C9459 /* PreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4068737F2C74CEE6009C9459 /* PreferenceView.swift */; };
 		4089908B2C4FD8F500DE1D43 /* MyTODOListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4089908A2C4FD8F500DE1D43 /* MyTODOListApp.swift */; };
 		4089908D2C4FD8F500DE1D43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4089908C2C4FD8F500DE1D43 /* ContentView.swift */; };
 		4089908F2C4FD8F600DE1D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4089908E2C4FD8F600DE1D43 /* Assets.xcassets */; };
@@ -19,6 +23,10 @@
 /* Begin PBXFileReference section */
 		403CA2092C64F70900E7DD2E /* Todo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todo.swift; sourceTree = "<group>"; };
 		403CA20B2C64F84B00E7DD2E /* TodoStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoStorage.swift; sourceTree = "<group>"; };
+		406873792C74C564009C9459 /* AccountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManager.swift; sourceTree = "<group>"; };
+		4068737B2C74C57D009C9459 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4068737D2C74CAA8009C9459 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4068737F2C74CEE6009C9459 /* PreferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceView.swift; sourceTree = "<group>"; };
 		408990872C4FD8F500DE1D43 /* MyTODOList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTODOList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4089908A2C4FD8F500DE1D43 /* MyTODOListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTODOListApp.swift; sourceTree = "<group>"; };
 		4089908C2C4FD8F500DE1D43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,9 +67,13 @@
 			children = (
 				4089908A2C4FD8F500DE1D43 /* MyTODOListApp.swift */,
 				4089908C2C4FD8F500DE1D43 /* ContentView.swift */,
+				4068737D2C74CAA8009C9459 /* LoginView.swift */,
+				4068737F2C74CEE6009C9459 /* PreferenceView.swift */,
 				4089908E2C4FD8F600DE1D43 /* Assets.xcassets */,
 				408990902C4FD8F600DE1D43 /* Preview Content */,
 				403CA2092C64F70900E7DD2E /* Todo.swift */,
+				406873792C74C564009C9459 /* AccountManager.swift */,
+				4068737B2C74C57D009C9459 /* User.swift */,
 				403CA20B2C64F84B00E7DD2E /* TodoStorage.swift */,
 			);
 			path = MyTODOList;
@@ -151,7 +163,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4068737A2C74C564009C9459 /* AccountManager.swift in Sources */,
+				406873802C74CEE6009C9459 /* PreferenceView.swift in Sources */,
+				4068737E2C74CAA8009C9459 /* LoginView.swift in Sources */,
 				4089908D2C4FD8F500DE1D43 /* ContentView.swift in Sources */,
+				4068737C2C74C57D009C9459 /* User.swift in Sources */,
 				403CA20A2C64F70900E7DD2E /* Todo.swift in Sources */,
 				4089908B2C4FD8F500DE1D43 /* MyTODOListApp.swift in Sources */,
 				403CA20C2C64F84B00E7DD2E /* TodoStorage.swift in Sources */,
