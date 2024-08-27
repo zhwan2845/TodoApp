@@ -4,7 +4,7 @@ struct LoginView: View {
     @State var username: String = ""
     var body: some View {
         VStack {
-            Text("TODO")
+            Text("TaskMaster")
                 .padding()
                 .font(.largeTitle)
                 .bold()
@@ -23,7 +23,7 @@ struct LoginView: View {
             }
             .padding()
             
-            Button("만약 TODO가 처음이라면?") {
+            Button("만약 TaskMaster가 처음이라면?") {
                 
             }
             .foregroundColor(.black)

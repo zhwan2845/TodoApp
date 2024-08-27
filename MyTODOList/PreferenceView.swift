@@ -1,9 +1,10 @@
 import SwiftUI
 
 struct PreferenceView: View {
+    @Binding var username: String
     var body: some View {
         VStack {
-            Text("haeun")
+            Text(username)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
                 .font(.largeTitle)
@@ -46,8 +47,4 @@ struct PreferenceView: View {
             Spacer()
         }
     }
-}
-
-#Preview {
-    PreferenceView()
 }
