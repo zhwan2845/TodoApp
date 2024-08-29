@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var username: String = ""
+    @State var usernameInput: String = ""
+    @Binding var mgr: AccountManager
     var body: some View {
         VStack {
             Text("TaskMaster")
@@ -10,12 +11,12 @@ struct LoginView: View {
                 .bold()
             
             HStack {
-                TextField("사용자 이름", text: $username)
+                TextField("사용자 이름", text: $usernameInput)
                     .padding()
                     .background(.gray.opacity(0.1))
                 
                 Button("로그인") {
-                    
+                    _ = mgr.signIn(username: usernameInput)
                 }
                 .padding()
                 .background(.yellow)
@@ -24,15 +25,11 @@ struct LoginView: View {
             .padding()
             
             Button("만약 TaskMaster가 처음이라면?") {
-                
+                _ = mgr.signUp(username: usernameInput)
             }
             .foregroundColor(.black)
             
             Spacer()
         }
     }
-}
-
-#Preview {
-    LoginView()
 }

@@ -1,10 +1,11 @@
 import SwiftUI
 
 struct PreferenceView: View {
-    @Binding var username: String
+    @Binding var mgr: AccountManager
+    
     var body: some View {
         VStack {
-            Text(username)
+            Text(mgr.getUsername())
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
                 .font(.largeTitle)
@@ -36,8 +37,10 @@ struct PreferenceView: View {
             .listStyle(PlainListStyle())
             
             List {
-                Text("로그아웃")
-                    .foregroundStyle(.red)
+                Button("로그아웃") {
+                    _ = mgr.signOut()
+                }
+                .foregroundStyle(.red)
                 Text("계정삭제")
                     .foregroundStyle(.red)
             }

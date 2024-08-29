@@ -1,5 +1,6 @@
 import Foundation
 
+@Observable
 class AccountManager {
     var currentUser: User
     var allowedUsers: [String]
@@ -7,6 +8,15 @@ class AccountManager {
     init() {
         currentUser = .none
         allowedUsers = []
+    }
+    
+    func getUsername() -> String {
+        switch currentUser {
+        case .isAuthenticated(let username):
+            return username
+        case .none:
+            return "Error"
+        }
     }
     
     func signUp(username: String) -> Bool {
@@ -17,6 +27,7 @@ class AccountManager {
             return false
         }
         allowedUsers.append(username)
+        currentUser = .isAuthenticated(username: username)
         return true
     }
     
@@ -28,11 +39,13 @@ class AccountManager {
         return true
     }
     
+    // 로그아웃
     func signOut() -> Bool {
         currentUser = .none
         return true
     }
     
+    // 계정 삭제
     func deleteAccount(username: String) -> Bool {
         allowedUsers.removeAll(where: { $0 == username })
         currentUser = .none

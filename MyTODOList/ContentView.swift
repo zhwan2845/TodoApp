@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @State var textInput: String = ""
     @State var todoStorage = TodoStorage()
-    @State var username: String = "Hello"
+    @State var accountMgr = AccountManager()
     
     var body: some View {
         NavigationStack {
@@ -15,7 +15,12 @@ struct ContentView: View {
                     Spacer()
                     
                     NavigationLink(destination: {
-                        PreferenceView(username: $username)
+                        switch accountMgr.currentUser {
+                        case .none:
+                            LoginView(mgr: $accountMgr)
+                        case .isAuthenticated(_):
+                            PreferenceView(mgr: $accountMgr)
+                        }
                     }) {
                         Circle()
                             .fill(.gray)
