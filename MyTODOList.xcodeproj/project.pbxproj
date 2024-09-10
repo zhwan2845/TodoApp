@@ -18,6 +18,7 @@
 		4089908D2C4FD8F500DE1D43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4089908C2C4FD8F500DE1D43 /* ContentView.swift */; };
 		4089908F2C4FD8F600DE1D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4089908E2C4FD8F600DE1D43 /* Assets.xcassets */; };
 		408990922C4FD8F600DE1D43 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 408990912C4FD8F600DE1D43 /* Preview Assets.xcassets */; };
+		40F0398A2C9070640040CC3D /* UsernameUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40F039892C9070640040CC3D /* UsernameUpdateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		4089908C2C4FD8F500DE1D43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4089908E2C4FD8F600DE1D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		408990912C4FD8F600DE1D43 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		40F039892C9070640040CC3D /* UsernameUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameUpdateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				4089908C2C4FD8F500DE1D43 /* ContentView.swift */,
 				4068737D2C74CAA8009C9459 /* LoginView.swift */,
 				4068737F2C74CEE6009C9459 /* PreferenceView.swift */,
+				40F039892C9070640040CC3D /* UsernameUpdateView.swift */,
 				4089908E2C4FD8F600DE1D43 /* Assets.xcassets */,
 				408990902C4FD8F600DE1D43 /* Preview Content */,
 				403CA2092C64F70900E7DD2E /* Todo.swift */,
@@ -163,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40F0398A2C9070640040CC3D /* UsernameUpdateView.swift in Sources */,
 				4068737A2C74C564009C9459 /* AccountManager.swift in Sources */,
 				406873802C74CEE6009C9459 /* PreferenceView.swift in Sources */,
 				4068737E2C74CAA8009C9459 /* LoginView.swift in Sources */,

@@ -19,6 +19,11 @@ class AccountManager {
         }
     }
     
+    func updateUsername(username: String) {
+        // TODO: username length check
+        currentUser = .isAuthenticated(username: username)
+    }
+    
     func signUp(username: String) -> Bool {
         guard 3 <= username.count && username.count <= 64 else {
             return false

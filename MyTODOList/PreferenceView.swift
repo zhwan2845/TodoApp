@@ -17,7 +17,11 @@ struct PreferenceView: View {
                 .font(.headline)
             
             List {
-                Text("이름")
+                NavigationLink(destination: UsernameUpdateView(mgr: $mgr)) {
+                    Text("이름")
+                }
+                
+                
                 Text("이메일")
             }
             .padding(.horizontal)
@@ -41,8 +45,10 @@ struct PreferenceView: View {
                     _ = mgr.signOut()
                 }
                 .foregroundStyle(.red)
-                Text("계정삭제")
-                    .foregroundStyle(.red)
+                Button("계정삭제") {
+                    _ = mgr.deleteAccount(username: mgr.getUsername())
+                }
+                .foregroundStyle(.red)
             }
             .padding(.horizontal)
             .listStyle(PlainListStyle())
